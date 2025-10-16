@@ -11,7 +11,7 @@ body {
 
 #titulo{
     font-family: 'Pangolin', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 4.5rem;
+    font-size: 4rem;
     color: rgb(60, 3, 75);
     display: flex;
     justify-content: center;
@@ -19,8 +19,9 @@ body {
 
 #titulo img {
     translate: 0 20px;
-    height: 65px;
+    height: 60px;
 }
+
 
 p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -115,4 +116,34 @@ p {
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+@media (max-width: 425px) {
+p {
+    font-size: 1.4rem;
+}
+}
+
+@media (max-width: 375px) {
+#titulo {
+    font-size: 3.5rem;
+}
+    
+#titulo img {
+    height: 45px;
+}
+    
+p {
+    font-size: 1.2rem;
+}
+}
+
+@media (max-width: 320px) {
+#titulo {
+    font-size: 3.2rem;
+}
+    
+#titulo img {
+    height: 40px;
+}
 }
