@@ -27,6 +27,7 @@ p {
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
+    text-align: center;
     color: rgb(31, 1, 39);
     font-weight: 500;
 }
@@ -37,6 +38,33 @@ p {
     justify-content: center;
     gap: 20px;
     align-items: center;
+}
+
+#caixa-de-botoes p {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    color: rgb(31, 1, 39);
+    font-weight: 500;
+    font-weight: bold;
+}
+
+#caixa-de-busca {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#buscar-fato {
+    height: 35px;
+    width: 100px;
+    border: none;
+    padding: 0;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.274);
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
 }
 
 .botao-fatos {
@@ -56,6 +84,17 @@ p {
     cursor: pointer;
 }
 
+#botao-de-busca {
+    width: 120px;
+    height: 40px;
+}
+
+#container-de-busca {
+   display: flex; 
+   flex-direction: column; 
+   align-items: center;
+}
+
 #resultado-fatos {
     margin: 30px auto 0;
     text-align: center;
@@ -65,7 +104,7 @@ p {
     align-items: center;
     background-color: white;
     padding: 20px;
-    width: 900px;
+    max-width: 900px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(57, 0, 73, 0.271);
     font-size: 1.4rem;
