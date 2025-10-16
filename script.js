@@ -11,19 +11,16 @@ const botao_buscar_fato_por_id = document.getElementById('botao-de-busca');
 botao_fato_unico.addEventListener('click', () => {
     carregarFatos();
 
-    div_resultado_fatos.innerHTML = '';
 });
 
 botao_tres_fatos.addEventListener('click', () => {
     carregarFatos({count: 3});
 
-    div_resultado_fatos.innerHTML = '';
 });
 
 botao_fato_russo.addEventListener('click', () => {
     carregarFatos({lang: 'rus'});
 
-    div_resultado_fatos.innerHTML = '';
 });
 
 botao_fato_russo_portugues.addEventListener('click', async () => {
@@ -58,7 +55,6 @@ botao_quant_aleatoria_fatos.addEventListener('click', () => {
 
     carregarFatos({count: quantidadeAleatoria, lang: 'por'});
 
-    div_resultado_fatos.innerHTML = '';
 })
 
 botao_buscar_fato_por_id.addEventListener('click', () => {
@@ -85,6 +81,7 @@ async function carregarFatos(parametros = {}) {
         });
 
         const fatos = resposta.data.data;
+        div_resultado_fatos.innerHTML = '';
         mostrarFatos(fatos);
     } catch (error) {
         console.error('Erro ao carregar fatos.', error);
@@ -93,7 +90,7 @@ async function carregarFatos(parametros = {}) {
 };
 
 function mostrarFatos(fatos) {
-    
+
     if(fatos && fatos.length > 0) {
         fatos.forEach(fato => {
             const caixa = document.createElement('div');
